@@ -1,3 +1,15 @@
+variable "project_name" {
+  type = string
+}
+
+variable "project_id" {
+  type = string
+}
+
+variable "region" {
+  type = string
+}
+
 variable "network_name" {
   type = string
 }
@@ -7,13 +19,5 @@ variable "subnet_name" {
 }
 
 variable "subnet_cidr" {
-  type = string
-}
-
-variable "region" {
-  type = string
-}
-
-variable "firwall_name" {
   type = string
 }
