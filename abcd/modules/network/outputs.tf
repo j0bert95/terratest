@@ -13,3 +13,11 @@ output "subnet_id" {
 output "subnet_name" {
   value = google_compute_subnetwork.mysubnet.name
 }
+
+output "subnet_cidr" {
+  value = google_compute_network.mysubnet.ip_cidr_range
+}
+
+output "subnet_link" {
+  value = google_compute_subnetwork.mysubnet.self_link
+}
