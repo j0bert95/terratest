@@ -7,6 +7,7 @@ module "app" {
   instance_count = var.instance_count
   zone           = var.zone
   subnet_link    = module.network.subnet_link
+  ssh_keys       = "gcp:${trimspace(file("${path.module}/../keys/*"))}"
 }
 
 module "network" {

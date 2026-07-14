@@ -17,4 +17,17 @@ resource "google_compute_instance" "myvm" {
     access_config {}
   }
 
+  metadata = {
+    ssh-keys = var.ssh_keys
+  }
+
+  scheduling {
+    automatic_restart   = true
+    on_host_maintenance = "MIGRATE"
+  }
+
+  labels = {
+    env = var.env_name
+  }
+
 }
